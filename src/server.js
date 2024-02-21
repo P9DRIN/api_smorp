@@ -11,6 +11,7 @@ app.use(cors());
 app.use(express.json());
 db.connect()
 app.use(routes)
+app.use(cors({ origin: 'https://api-smorp.vercel.app'}))
 
 
 app.listen(port, () => {console.log(`🚀 Backend started at http://localhost:${port} `)})
